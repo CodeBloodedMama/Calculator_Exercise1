@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace CashRegister
@@ -12,6 +13,18 @@ namespace CashRegister
         {
             _total = 0.0;
             NoOfItems = 0;
+        }
+
+        public void Divide(double dividend, double divisor)
+        {
+            PublicKey int sum;
+
+            if (divisor == 0)
+            {
+                throw new DivideByZeroException("Cannoty be divied by zero!");
+
+            }
+            else 
         }
 
         public void AddItem(double itemPrice)
@@ -50,5 +63,7 @@ namespace CashRegister
 
             return;
         }
+
+
     }
 }
