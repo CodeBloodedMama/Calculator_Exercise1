@@ -1,18 +1,19 @@
 ﻿using NUnit.Framework;
 using NUnit.Framework.Internal;
+using CalculatorApp;
 
-namespace CalculatorApp
+namespace CalculatorUnitTests
 {
 
     public class CalculatorTest
     {
-        private Calculator calc1;
-        private Calculator calc2;
+        private CalculatorApp.Calculator calc1;
+        private CalculatorApp.Calculator calc2;
 
         [SetUp]
         protected void SetUp()
         {
-            calc1 = new Calculator();
+            calc1 = new CalculatorApp.Calculator();
         }
 
         [Test]
