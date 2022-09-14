@@ -6,22 +6,26 @@ namespace CalculatorApp
     {
         public double Add(double a, double b)
         {
-            return a + b;
+            decimal result = (decimal)(a + b);
+            return (double)result;
         }
 
         public double Substract(double a, double b)
         {
-            return a - b;
+            double result = a - b;
+            return result;
         }
 
         public double Multiply(double a, double b)
         {
-            return MathF.Round((float)a * (float)b);
+            decimal result = (decimal)(a * b);
+            return (double)result;
         }
 
         public double Power(double a, double b)
         {
-            return MathF.Round(MathF.Pow((float)a, (float)b));
+            decimal result = (decimal)MathF.Pow((float)a, (float)b);
+            return (double)result;
         }
     }
 }

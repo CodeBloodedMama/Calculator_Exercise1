@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using NUnit.Framework.Internal;
-using CalculatorApp;
+
 
 namespace CalculatorUnitTests
 {
@@ -35,9 +35,9 @@ namespace CalculatorUnitTests
         [Test]
         public void TestSubstract()
         {
-            double a = 2.3;
-            double b = 3.2;
-            Assert.AreEqual(-0.9, calc1.Substract(a, b));
+            double a = 3;
+            double b = 2;
+            Assert.AreEqual(1, calc1.Substract(a, b));
 
             a = 62;
             b = 20;
