@@ -20,12 +20,20 @@ namespace CalculatorApp
             double a = 2.3;
             double b = 3.2;
             Assert.AreEqual(5.5, calc1.Add(a, b));
+        }
 
+        [Test]
+        public void AddTest2()
+        {
             // Add Test 2
             a = -4;
             b = -6.5;
             Assert.AreEqual(-10.5, calc1.Add(a, b));
+        }
 
+        [Test]
+        public void AddTest3()
+        {
             // added test, overload
             calc1.Accumulator = 4;
             calc1.Add(6);
