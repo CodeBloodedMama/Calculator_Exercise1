@@ -132,6 +132,15 @@ namespace CalculatorApp
             Assert.AreEqual(6.25, calc1.Power(a, b));
 
             // power test, overload
+            calc1.Accumulator = 2;
+            calc1.Power(2);
+            Assert.AreEqual(4, calc1.Accumulator);
+
+            calc1.Power(-2);
+            Assert.AreEqual(0.0625, calc1.Accumulator);
+
+            calc1.Power(1.5);
+            Assert.AreEqual(0.015625, calc1.Accumulator);
         }
 
         [Test]

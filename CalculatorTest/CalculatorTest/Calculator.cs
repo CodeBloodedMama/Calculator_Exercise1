@@ -44,7 +44,8 @@ namespace CalculatorApp
         }
         public double Power(double exponent)
         {
-            return Math.Pow(accumulator, exponent);
+            accumulator = Math.Pow(accumulator, exponent);
+            return accumulator;
         }
 
         public double Divide(double dividend, double divisor)
