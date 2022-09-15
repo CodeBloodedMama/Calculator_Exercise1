@@ -11,9 +11,10 @@ namespace CalculatorApp
         {
             return a + b;
         }
-        public double Add(double addend)
+        public double Add(double added)
         {
-            return addend + accumulator;
+            accumulator=accumulator+added;
+            return accumulator;
         }
 
         public double Substract(double a, double b)
@@ -72,6 +73,7 @@ namespace CalculatorApp
         {
             get { return accumulator; }
             set { accumulator += value; }
+
         }
         public void Clear()
         { accumulator = 0; }

@@ -7,9 +7,6 @@ namespace CalculatorApp
     {
         private Calculator calc1;
 
-        //private Calculator calc2;
-        //private Calculator calc3;
-
         [SetUp]
         protected void SetUp()
         {
@@ -31,8 +28,15 @@ namespace CalculatorApp
 
             // added test, overload
             calc1.Accumulator = 4;
-            double added = 6;
-            Assert.AreEqual(10, calc1.Accumulator + added);
+            calc1.Add(6);
+            Assert.AreEqual(10, calc1.Accumulator);
+
+            calc1.Add(2);
+            Assert.AreEqual(12, calc1.Accumulator);
+
+            calc1.Add(-2.3);
+            Assert.AreEqual(9.7, calc1.Accumulator);
+
         }
 
         [Test]
@@ -153,7 +157,11 @@ namespace CalculatorApp
             // set
             calc1.Accumulator = 7;
             calc1.Accumulator = 7;
-            Assert.AreEqual(14,calc1.Accumulator);
+            calc1.Accumulator = 1;
+            Assert.AreEqual(15,calc1.Accumulator);
+
+            calc1.Accumulator = 1;
+            Assert.AreEqual(16, calc1.Accumulator);
 
             // clear
             calc1.Clear();
