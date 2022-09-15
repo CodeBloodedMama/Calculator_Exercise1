@@ -139,7 +139,7 @@ namespace CalculatorApp
 
             // divide test, overload
             calc1.Accumulator = 4;
-            double divisor = 2.5;
+            divisor = 2.5;
             Assert.AreEqual(1.6, calc1.Accumulator / divisor);
         }
 
