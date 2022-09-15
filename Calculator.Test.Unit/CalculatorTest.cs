@@ -105,17 +105,29 @@ namespace CalculatorApp
             double a = 2;
             double b = 3;
             Assert.AreEqual(6, calc1.Multiply(a, b));
+        }
 
+        [Test]
+        public void TestMultiply2()
+        {
             // Multiply Test 2
-            a = 2.5;
-            b = 3.5;
+            double a = 2.5;
+            double b = 3.5;
             Assert.AreEqual(8.75, calc1.Multiply(a, b));
+        }
 
-            // Multiply Test 1
-            a = -2.5;
-            b = 3.5;
+        [Test]
+        public void TestMultiply3()
+        {
+            // Multiply Test 3
+            double a = -2.5;
+            double b = 3.5;
             Assert.AreEqual(-8.75, calc1.Multiply(a, b));
+        }
 
+        [Test]
+        public void TestMultiplyOverload()
+        {
             // multiply test, overload
             calc1.Accumulator = 10;
             calc1.Multiply(6);
