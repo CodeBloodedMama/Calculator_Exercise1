@@ -69,7 +69,8 @@ namespace CalculatorApp
             }
             else
             {
-                return accumulator / divisor;
+                accumulator = accumulator / divisor;
+                return accumulator;
             }
         }
 
