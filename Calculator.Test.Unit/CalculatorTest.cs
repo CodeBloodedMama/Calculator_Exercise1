@@ -32,7 +32,7 @@ namespace CalculatorApp
         }
 
         [Test]
-        public void AddTest3()
+        public void AddTestOverload()
         {
             // added test, overload
             calc1.Accumulator = 4;
@@ -63,17 +63,29 @@ namespace CalculatorApp
             double a = 2.3;
             double b = 3.2;
             Assert.AreEqual(-0.9, calc1.Substract(a, b), 0.001);
+        }
 
+        [Test]
+        public void TestSubstract2()
+        {
             // Substract Test 2
             a = 62;
             b = 20;
             Assert.AreEqual(42, calc1.Substract(a, b), 0.001);
+        }
 
+        [Test]
+        public void TestSubstract3()
+        {
             // Substract Test 3
             a = -62;
             b = -20;
             Assert.AreEqual(-42, calc1.Substract(a, b), 0.001);
+        }
 
+        [Test]
+        public void TestSubstractOverload()
+        {
             // substract test, overload
             calc1.Accumulator = 10;
             calc1.Substract(6);
