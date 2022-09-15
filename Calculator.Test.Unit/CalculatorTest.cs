@@ -147,23 +147,39 @@ namespace CalculatorApp
             double a = 2;
             double b = 3;
             Assert.AreEqual(8, calc1.Power(a, b));
+        }
+
+        [Test]
+        public void TestPower2()
+        {
 
             // Power Test 2
             a = -2;
             b = 3;
             Assert.AreEqual(-8, calc1.Power(a, b));
+        }
 
+        [Test]
+        public void TestPower3()
+        {
             // Power Test 3
-            a = 2;
-            b = -3;
+            double a = 2;
+            double b = -3;
             Assert.AreEqual(0.125, calc1.Power(a, b));
+        }
 
-            // Power Test 4
-            a = 2.5;
-            b = 2;
-            Assert.AreEqual(6.25, calc1.Power(a, b));
-
-            // power test, overload
+        [Test]
+        public void TestPower4()
+        {
+        // Power Test 4
+       double a = 2.5;
+        double b = 2;
+        Assert.AreEqual(6.25, calc1.Power(a, b));
+    }
+    [Test]
+    public void TestPowerOverload()
+    {
+    // power test, overload
             calc1.Accumulator = 2;
             calc1.Power(2);
             Assert.AreEqual(4, calc1.Accumulator);
@@ -173,7 +189,7 @@ namespace CalculatorApp
 
             calc1.Power(1.5);
             Assert.AreEqual(0.015625, calc1.Accumulator);
-        }
+    }
 
         [Test]
         public void TestDivide()
