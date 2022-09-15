@@ -182,17 +182,29 @@ namespace CalculatorApp
             double dividend = 6;
             double divisor = 2;
             Assert.AreEqual(3, calc1.Divide(dividend, divisor));
+        }
 
+        [Test]
+        public void TestDivide2()
+        {
             // Divide Test 2
-            dividend = -6.5;
-            divisor = 2.5;
+            double dividend = -6.5;
+            double divisor = 2.5;
             Assert.AreEqual(-2.6, calc1.Divide(dividend, divisor));
+        }
 
+        [Test]
+        public void TestDivide3()
+        {
             // Divide Test 3
-            dividend = -6;
-            divisor = -2;
+            double dividend = -6;
+            double divisor = -2;
             Assert.AreEqual(3, calc1.Divide(dividend, divisor));
+        }
 
+        [Test]
+        public void TestDivideOverload()
+        {
             // divide test, overload
             calc1.Accumulator = 10;
             calc1.Divide(2);
