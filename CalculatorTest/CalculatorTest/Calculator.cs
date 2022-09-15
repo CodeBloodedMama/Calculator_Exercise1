@@ -34,7 +34,8 @@ namespace CalculatorApp
         }
         public double Multiply(double multiplier)
         {
-            return multiplier * accumulator;
+            accumulator = multiplier * accumulator;
+            return accumulator;
         }
 
         public double Power(double x, double exp)

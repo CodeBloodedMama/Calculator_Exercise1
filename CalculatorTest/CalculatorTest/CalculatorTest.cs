@@ -97,9 +97,15 @@ namespace CalculatorApp
             Assert.AreEqual(-8.75, calc1.Multiply(a, b));
 
             // multiply test, overload
-            calc1.Accumulator = 4;
-            double multiplier = 5;
-            Assert.AreEqual(20, calc1.Accumulator * multiplier);
+            calc1.Accumulator = 10;
+            calc1.Multiply(6);
+            Assert.AreEqual(60, calc1.Accumulator);
+
+            calc1.Multiply(-2);
+            Assert.AreEqual(-120, calc1.Accumulator);
+
+            calc1.Multiply(2.5);
+            Assert.AreEqual(-300, calc1.Accumulator);
         }
 
         [Test]
