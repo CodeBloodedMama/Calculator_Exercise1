@@ -28,6 +28,11 @@ namespace CalculatorApp
             a = -4;
             b = -6.5;
             Assert.AreEqual(-10.5, calc1.Add(a, b));
+
+            // added test, overload
+            calc1.Accumulator = 4;
+            double added = 6;
+            Assert.AreEqual(10, calc1.Accumulator + added);
         }
 
         [Test]
@@ -57,6 +62,11 @@ namespace CalculatorApp
             a = -62;
             b = -20;
             Assert.AreEqual(-42, calc1.Substract(a, b), 0.001);
+
+            // substract test, overload
+            calc1.Accumulator = 4;
+            double substractor = 1;
+            Assert.AreEqual(3, calc1.Accumulator - substractor);
         }
 
         [Test]
@@ -76,6 +86,11 @@ namespace CalculatorApp
             a = -2.5;
             b = 3.5;
             Assert.AreEqual(-8.75, calc1.Multiply(a, b));
+
+            // multiply test, overload
+            calc1.Accumulator = 4;
+            double multiplier = 5;
+            Assert.AreEqual(20, calc1.Accumulator * multiplier);
         }
 
         [Test]
@@ -100,6 +115,8 @@ namespace CalculatorApp
             a = 2.5;
             b = 2;
             Assert.AreEqual(6.25, calc1.Power(a, b));
+
+            // power test, overload
         }
 
         [Test]
@@ -119,6 +136,11 @@ namespace CalculatorApp
             dividend = -6;
             divisor = -2;
             Assert.AreEqual(3, calc1.Divide(dividend, divisor));
+
+            // divide test, overload
+            calc1.Accumulator = 4;
+            double divisor = 2.5;
+            Assert.AreEqual(1.6, calc1.Accumulator / divisor);
         }
 
         [Test]
@@ -136,27 +158,6 @@ namespace CalculatorApp
             // clear
             calc1.Clear();
             Assert.AreEqual(0,calc1.Accumulator);
-
-            // added test
-            calc1.Accumulator = 4;
-            double added = 6;
-            Assert.AreEqual(10,calc1.Accumulator+added);
-
-            // substract test
-            double substractor = 1;
-            Assert.AreEqual(3,calc1.Accumulator-substractor);
-            
-            // multiply test
-            double multiplier = 5;
-            Assert.AreEqual(20,calc1.Accumulator*multiplier);
-
-            // divide test
-            double divisor = 2.5;
-            Assert.AreEqual(1.6, calc1.Accumulator / divisor);
-
-            // power test
-            
-
         }
     }
 }
