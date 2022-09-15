@@ -36,7 +36,6 @@ namespace CalculatorApp
 
             calc1.Add(-2.3);
             Assert.AreEqual(9.7, calc1.Accumulator);
-
         }
 
         [Test]
@@ -68,9 +67,15 @@ namespace CalculatorApp
             Assert.AreEqual(-42, calc1.Substract(a, b), 0.001);
 
             // substract test, overload
-            calc1.Accumulator = 4;
-            double substractor = 1;
-            Assert.AreEqual(3, calc1.Accumulator - substractor);
+            calc1.Accumulator = 10;
+            calc1.Substract(6);
+            Assert.AreEqual(4, calc1.Accumulator);
+
+            calc1.Substract(-2);
+            Assert.AreEqual(6, calc1.Accumulator);
+
+            calc1.Substract(2.5);
+            Assert.AreEqual(3.5, calc1.Accumulator);
         }
 
         [Test]
