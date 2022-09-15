@@ -19,12 +19,12 @@ namespace CalculatorApp
         [Test]
         public void AddTest()
         {
-            // Test 1
+            // Add Test 1
             double a = 2.3;
             double b = 3.2;
             Assert.AreEqual(5.5, calc1.Add(a, b));
            
-            // Test 2
+            // Add Test 2
             a = -4;
             b = -6.5;
             Assert.AreEqual(-10.5, calc1.Add(a, b));
@@ -33,6 +33,7 @@ namespace CalculatorApp
         [Test]
         public void TestAddTypes()
         {
+            // Add Test 3
             int a = 2;
             int b = 3;
             Assert.AreEqual(5, calc1.Add(a, b));
@@ -42,29 +43,82 @@ namespace CalculatorApp
         [Test]
         public void TestSubstract()
         {
+            // Substract Test 1
             double a = 2.3;
             double b = 3.2;
             Assert.AreEqual(-0.9, calc1.Substract(a, b), 0.001);
 
+            // Substract Test 2
             a = 62;
             b = 20;
             Assert.AreEqual(42, calc1.Substract(a, b), 0.001);
+
+            // Substract Test 3
+            a = -62;
+            b = -20;
+            Assert.AreEqual(-42, calc1.Substract(a, b), 0.001);
         }
 
         [Test]
         public void TestMultiply()
         {
+            // Multiply Test 1
             double a = 2;
             double b = 3;
             Assert.AreEqual(6, calc1.Multiply(a, b));
+
+            // Multiply Test 2
+            a = 2.5;
+            b = 3.5;
+            Assert.AreEqual(8.75, calc1.Multiply(a, b));
+
+            // Multiply Test 1
+            a = -2.5;
+            b = 3.5;
+            Assert.AreEqual(-8.75, calc1.Multiply(a, b));
         }
 
         [Test]
         public void TestPower()
         {
+            // Power Test 1
             double a = 2;
             double b = 3;
             Assert.AreEqual(8, calc1.Power(a, b));
+
+            // Power Test 2
+            a = -2;
+            b = 3;
+            Assert.AreEqual(-8, calc1.Power(a, b));
+
+            // Power Test 3
+            a = 2;
+            b = -3;
+            Assert.AreEqual(0.125, calc1.Power(a, b));
+
+            // Power Test 4
+            a = 2.5;
+            b = 2;
+            Assert.AreEqual(6.25, calc1.Power(a, b));
+        }
+
+        [Test]
+        public void TestDivide()
+        {
+            // Divide Test 1
+            double dividend = 6;
+            double divisor = 2;
+            Assert.AreEqual(3,calc1.Divide(dividend,divisor));
+
+            // Divide Test 2
+            dividend = -6.5;
+            divisor = 2.5;
+            Assert.AreEqual(-2.6, calc1.Divide(dividend, divisor));
+
+            // Divide Test 3
+            dividend = -6;
+            divisor = -2;
+            Assert.AreEqual(3, calc1.Divide(dividend, divisor));
         }
 
         [Test]
@@ -82,6 +136,27 @@ namespace CalculatorApp
             // clear
             calc1.Clear();
             Assert.AreEqual(0,calc1.Accumulator);
+
+            // added test
+            calc1.Accumulator = 4;
+            double added = 6;
+            Assert.AreEqual(10,calc1.Accumulator+added);
+
+            // substract test
+            double substractor = 1;
+            Assert.AreEqual(3,calc1.Accumulator-substractor);
+            
+            // multiply test
+            double multiplier = 5;
+            Assert.AreEqual(20,calc1.Accumulator*multiplier);
+
+            // divide test
+            double divisor = 2.5;
+            Assert.AreEqual(1.6, calc1.Accumulator / divisor);
+
+            // power test
+            
+
         }
     }
 }
