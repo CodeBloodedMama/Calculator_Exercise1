@@ -154,8 +154,8 @@ namespace CalculatorApp
         {
 
             // Power Test 2
-            a = -2;
-            b = 3;
+            double a = -2;
+            double b = 3;
             Assert.AreEqual(-8, calc1.Power(a, b));
         }
 
