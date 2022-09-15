@@ -26,8 +26,8 @@ namespace CalculatorApp
         public void AddTest2()
         {
             // Add Test 2
-            a = -4;
-            b = -6.5;
+            double a = -4;
+            double b = -6.5;
             Assert.AreEqual(-10.5, calc1.Add(a, b));
         }
 
@@ -69,8 +69,8 @@ namespace CalculatorApp
         public void TestSubstract2()
         {
             // Substract Test 2
-            a = 62;
-            b = 20;
+            double a = 62;
+            double b = 20;
             Assert.AreEqual(42, calc1.Substract(a, b), 0.001);
         }
 
@@ -78,8 +78,8 @@ namespace CalculatorApp
         public void TestSubstract3()
         {
             // Substract Test 3
-            a = -62;
-            b = -20;
+            double a = -62;
+            double b = -20;
             Assert.AreEqual(-42, calc1.Substract(a, b), 0.001);
         }
 
