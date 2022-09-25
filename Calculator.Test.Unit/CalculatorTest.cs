@@ -219,6 +219,18 @@ namespace CalculatorApp
         }
 
         [Test]
+        public void TestDivideByZero()
+        {
+            double divided = 10;
+            double divisor = 0;
+
+            Assert.That( () =>calc1.Divide(0), Throws.TypeOf<DivideByZeroException>() );
+
+
+        }
+
+
+        [Test]
         public void TestDivideOverload()
         {
             // divide test, overload
