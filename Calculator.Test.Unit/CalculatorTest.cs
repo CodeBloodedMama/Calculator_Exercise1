@@ -20,12 +20,20 @@ namespace CalculatorApp
             double a = 2.3;
             double b = 3.2;
             Assert.AreEqual(5.5, calc1.Add(a, b));
+        }
 
+        [Test]
+        public void AddTest2()
+        {
             // Add Test 2
-            a = -4;
-            b = -6.5;
+            double a = -4;
+            double b = -6.5;
             Assert.AreEqual(-10.5, calc1.Add(a, b));
+        }
 
+        [Test]
+        public void AddTestOverload()
+        {
             // added test, overload
             calc1.Accumulator = 4;
             calc1.Add(6);
@@ -55,17 +63,29 @@ namespace CalculatorApp
             double a = 2.3;
             double b = 3.2;
             Assert.AreEqual(-0.9, calc1.Substract(a, b), 0.001);
+        }
 
+        [Test]
+        public void TestSubstract2()
+        {
             // Substract Test 2
-            a = 62;
-            b = 20;
+            double a = 62;
+            double b = 20;
             Assert.AreEqual(42, calc1.Substract(a, b), 0.001);
+        }
 
+        [Test]
+        public void TestSubstract3()
+        {
             // Substract Test 3
-            a = -62;
-            b = -20;
+            double a = -62;
+            double b = -20;
             Assert.AreEqual(-42, calc1.Substract(a, b), 0.001);
+        }
 
+        [Test]
+        public void TestSubstractOverload()
+        {
             // substract test, overload
             calc1.Accumulator = 10;
             calc1.Substract(6);
@@ -85,17 +105,29 @@ namespace CalculatorApp
             double a = 2;
             double b = 3;
             Assert.AreEqual(6, calc1.Multiply(a, b));
+        }
 
+        [Test]
+        public void TestMultiply2()
+        {
             // Multiply Test 2
-            a = 2.5;
-            b = 3.5;
+            double a = 2.5;
+            double b = 3.5;
             Assert.AreEqual(8.75, calc1.Multiply(a, b));
+        }
 
-            // Multiply Test 1
-            a = -2.5;
-            b = 3.5;
+        [Test]
+        public void TestMultiply3()
+        {
+            // Multiply Test 3
+            double a = -2.5;
+            double b = 3.5;
             Assert.AreEqual(-8.75, calc1.Multiply(a, b));
+        }
 
+        [Test]
+        public void TestMultiplyOverload()
+        {
             // multiply test, overload
             calc1.Accumulator = 10;
             calc1.Multiply(6);
@@ -115,23 +147,39 @@ namespace CalculatorApp
             double a = 2;
             double b = 3;
             Assert.AreEqual(8, calc1.Power(a, b));
+        }
+
+        [Test]
+        public void TestPower2()
+        {
 
             // Power Test 2
-            a = -2;
-            b = 3;
+            double a = -2;
+            double b = 3;
             Assert.AreEqual(-8, calc1.Power(a, b));
+        }
 
+        [Test]
+        public void TestPower3()
+        {
             // Power Test 3
-            a = 2;
-            b = -3;
+            double a = 2;
+            double b = -3;
             Assert.AreEqual(0.125, calc1.Power(a, b));
+        }
 
-            // Power Test 4
-            a = 2.5;
-            b = 2;
-            Assert.AreEqual(6.25, calc1.Power(a, b));
-
-            // power test, overload
+        [Test]
+        public void TestPower4()
+        {
+        // Power Test 4
+       double a = 2.5;
+        double b = 2;
+        Assert.AreEqual(6.25, calc1.Power(a, b));
+    }
+    [Test]
+    public void TestPowerOverload()
+    {
+    // power test, overload
             calc1.Accumulator = 2;
             calc1.Power(2);
             Assert.AreEqual(4, calc1.Accumulator);
@@ -141,7 +189,7 @@ namespace CalculatorApp
 
             calc1.Power(1.5);
             Assert.AreEqual(0.015625, calc1.Accumulator);
-        }
+    }
 
         [Test]
         public void TestDivide()
@@ -150,17 +198,29 @@ namespace CalculatorApp
             double dividend = 6;
             double divisor = 2;
             Assert.AreEqual(3, calc1.Divide(dividend, divisor));
+        }
 
+        [Test]
+        public void TestDivide2()
+        {
             // Divide Test 2
-            dividend = -6.5;
-            divisor = 2.5;
+            double dividend = -6.5;
+            double divisor = 2.5;
             Assert.AreEqual(-2.6, calc1.Divide(dividend, divisor));
+        }
 
+        [Test]
+        public void TestDivide3()
+        {
             // Divide Test 3
-            dividend = -6;
-            divisor = -2;
+            double dividend = -6;
+            double divisor = -2;
             Assert.AreEqual(3, calc1.Divide(dividend, divisor));
+        }
 
+        [Test]
+        public void TestDivideOverload()
+        {
             // divide test, overload
             calc1.Accumulator = 10;
             calc1.Divide(2);
