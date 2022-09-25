@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using NUnit.Framework.Internal;
 
 namespace CalculatorApp
@@ -217,6 +217,18 @@ namespace CalculatorApp
             double divisor = -2;
             Assert.AreEqual(3, calc1.Divide(dividend, divisor));
         }
+
+        [Test]
+        public void TestDivideByZero()
+        {
+            double divided = 10;
+            double divisor = 0;
+
+            Assert.That( () =>calc1.Divide(0), Throws.TypeOf<DivideByZeroException>() );
+
+
+        }
+
 
         [Test]
         public void TestDivideOverload()
